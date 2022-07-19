@@ -1,0 +1,80 @@
+section#about > h4 {
+  font-size: 1.5rem;
+}
+
+section#about > h2 {
+  font-size: 3.2rem;
+}
+
+.about__container {
+  display: grid;
+  grid-template-columns: 30% 50%;
+  gap: 15%;
+}
+
+/* === IMAGE === */
+
+.about__me {
+  width: 100%;
+  aspect-ratio: 1/1;
+  border-radius: 2rem;
+  background: linear-gradient(45deg, transparent, var(--color-primary), transparent);
+  display: block;
+  margin-top: 10vh;
+}
+
+.about__me-image {
+  border-radius: 2rem;
+  overflow: hidden;
+  transform: rotate(10deg);
+  height: 100%;
+  align-items: center;
+  transition: var(--transition);
+}
+
+.about__me-image:hover {
+  transform: rotate(0deg);
+}
+
+/* === CARDS === */
+.about__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem
+}
+
+.about__card {
+  background: var(--color-bg-variant);
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding: 2.5rem 2rem 2rem 2rem;
+  text-align: center;
+  transition: var(--transition);
+  cursor: default;
+}
+
+.about__card > svg {
+  font-size: 30px;
+}
+
+.about__card > h3 {
+  font-weight: 600;
+  padding: 0.25rem 0;
+}
+
+.about__card > p {
+  font-size: 15px;
+}
+
+.about__card:hover {
+background: transparent;
+border-color: var(--color-primary-variant);
+transform: scale(1.05);
+}
+
+
+
+/* === TABS === */
+.about__tabs {
+  margin-top: 2rem;
+}
