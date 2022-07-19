@@ -1,6 +1,7 @@
 /* === INTRODUCTION === */
 header {
   height: 100vh;
+  margin-bottom: 6rem;
   padding-top: 6rem;
   overflow: hidden;
 }
@@ -11,7 +12,28 @@ header {
   justify-content: center;
 }
 
-.x0.x1.x2 > div{
+.header__container > h1 {
+  width: 100%;
+  color: var(--color-primary)
+}
+
+.header__container > h2 {
+  color: var(--color-light);
+  font-size: 2rem;
+}
+
+.header__greeting {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem
+}
+
+.header__greeting > h1 {
+  font-size: 2.2rem;
+}
+
+.x0.x3.x4.x5 {
   width: 100%;
 }
 
@@ -30,7 +52,7 @@ header {
   align-items: center;
   gap: 2rem;
   position: absolute;
-  left: 2.5rem;
+  left: auto;
   bottom: 3rem;
 }
 
@@ -56,22 +78,22 @@ header {
   width: 22rem;
   height: 30rem;
   position: absolute;
-  left: calc(50% - 11.4rem);
+  left: calc(50% - 10.5rem);
   margin-top: 4rem;
   border-radius: 12rem 12rem 0 0;
   overflow: hidden;
   padding: 4rem 1.5rem 1.5rem 3rem;
 }
 
-.me img {
-  width: 90%;
+/* .me img {
+  width: 100%;
   margin: auto;
-}
+} */
 
 /* === SCROLL === */
 .scroll_down {
   position: absolute;
-  right: 2.5rem;
+  right: 5.5rem;
   bottom: 10rem;
   transform: rotate(90deg);
   font-weight: 400;
@@ -88,18 +110,18 @@ header {
   transform: rotate(90deg) translateX(2rem);
 }
 
-/* ===== MEDIA QUEIRES (MD DEVICES) ===== */
-@media screen and (max-width: 1024px) {
-  header {
-    height: 72.5vh;
-  }
-}
-
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
-@media screen and (max-width: 600px) { 
+@media screen and (max-width: 700px) { 
   header {
-    height: 100vh;
-    padding-top: 4rem;
+    padding: 6rem 2rem 2rem 2rem;
+  }
+
+  .header__container > h2 {
+    font-size: 1.5rem;;
+  }
+
+  .header__greeting > h3 {
+    font-size: 1.35rem;
   }
 
   .header__socials,
@@ -109,13 +131,39 @@ header {
 
   .cta > .btn {
     width: 100%;
+    padding: 1rem 0.5rem;
   }
 
   .cta > .btn-primary {
-    padding: 1.5rem 0.5rem;
+    padding: 2rem 0.5rem;
   }
 
   .me {
     left: calc(50% - 11rem);
+    margin-top: 2rem;
+  }
+}
+
+/* ===== MEDIA QUEIRES (XS DEVICES) ===== */
+@media screen and (max-width: 400px) and (max-height: 700px) { 
+  header {
+    padding: 3rem 2rem 2rem 2rem;
+  }
+
+  .header__container > h2 {
+    width: 100%;
+    text-align: center;
+    padding-right: 1rem;
+  }
+
+  .header__greeting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem
+  }
+
+  .header__greeting > h1 {
+    font-size: 2.2rem;
   }
 }

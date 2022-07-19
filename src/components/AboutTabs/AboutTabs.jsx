@@ -15,9 +15,9 @@ const AboutTabs = () => {
         onSelect={(index) => setTabIndex(index)}>
         <TabList>
           <Tab 
-            className={tabIndex === 0 ? "active-tab" : "react-tabs__tab"}>{tab1}</Tab>
+            className={tabIndex === 0 ? "react-tabs__tab active" : "react-tabs__tab"}>{tab1}</Tab>
           <Tab 
-            className={tabIndex === 1 ? "active-tab" : "react-tabs__tab"}>{tab2}</Tab>
+            className={tabIndex === 1 ? "react-tabs__tab active" : "react-tabs__tab"}>{tab2}</Tab>
         </TabList>
 
         <TabPanel>
@@ -25,7 +25,15 @@ const AboutTabs = () => {
             <ul>
               <li>
                 <h3>
-                  Web Development - Development
+                  Web Development
+                </h3>
+                <h4>
+                  Build websites and web apps using javascript and its frameworks.
+                </h4>
+              </li>
+              <li>
+                <h3>
+                  Web Development
                 </h3>
                 <h4>
                   Build websites and web apps using javascript and its frameworks.
@@ -39,7 +47,7 @@ const AboutTabs = () => {
             <ul>
               <li>
               <h3>
-                  Web Development - Development
+                  Web Development
                 </h3>
                 <h4>
                   Build websites and web apps using javascript and its frameworks.

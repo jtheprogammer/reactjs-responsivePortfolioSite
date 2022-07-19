@@ -15,9 +15,12 @@ const Header = () => {
   return (
     <header>
       <div className="container header__container">
+        <div className="header__greeting">
+          <h1>👋</h1>
         <h3>Hello I'm</h3>
+        </div>
         <h1>Jose Luis Cruz</h1>
-        <h2 className="text-light">
+        <h2>
           {"Aspiring "}
           <TextLoop children={textLoopItems} interval={2000} />
         </h2>

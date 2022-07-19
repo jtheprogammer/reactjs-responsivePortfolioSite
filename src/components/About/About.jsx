@@ -22,7 +22,9 @@ const About = () => {
         <div className="about__content">
           <div className="about__cards">
             <article className="about__card">
-              <FontAwesomeIcon icon={faBriefcase} />
+              <FontAwesomeIcon 
+                icon={faBriefcase}
+              />
               <h3>Education</h3>
               <p>3+ Years as a Graduate-level Biology Researcher</p>
             </article>
@@ -35,7 +37,7 @@ const About = () => {
               <FontAwesomeIcon icon={faGithub} />
               <h3>Portfolio</h3>
               <p>
-                7 Completed Projects Publically Posted on My GitHub Page
+                7 Completed Projects Posted Publically on GitHub
               </p>
             </article>
           </div>

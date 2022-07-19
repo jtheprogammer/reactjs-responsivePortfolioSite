@@ -25,8 +25,13 @@
   width: 100%;
 }
 
-.active-tab {
+.react-tabs__tab.active {
   border-bottom: 1px solid var(--color-primary);
+}
+
+.react-tabs__tab.active::after {
+  width: 0%;
+  transition: 0s;
 }
 
 
@@ -42,5 +47,23 @@
 .tab__panel h4 {
   font-weight: 400;
   font-size: 18px;
+  margin: 0.1rem 0 1.25rem 2rem;
   color: rgb(187, 187, 201);
+}
+
+/* ===== MEDIA QUEIRES (
+  SM DEVICES) ===== */
+@media screen and (max-width: 700px) {
+  .react-tabs__tab-list {
+  font-size: 1.25rem;
+}
+
+  .tab__panel h3 {
+  font-size: 1.125rem;
+}
+
+  .tab__panel h4 {
+    font-size: 1rem;
+    margin: 0.1rem 0 1.25rem 1.5rem
+}
 }
