@@ -7,7 +7,6 @@ import TextLoop from "react-text-loop";
 import Resume from "../../assets/Text/JoseLuisCruz-Resume.pdf";
 import Me from "../../assets/Images/Me.png";
 import HeaderSocials from "./HeaderSocials";
-import { text } from "@fortawesome/fontawesome-svg-core";
 
 const textLoopItems = [
   "Developer",

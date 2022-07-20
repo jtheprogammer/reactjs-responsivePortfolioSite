@@ -1,6 +1,6 @@
-import React from 'react';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const HeaderSocials = () => {
   return (
@@ -8,17 +8,15 @@ const HeaderSocials = () => {
       <a
         href="https://www.linkedin.com/in/jose-cruz-9a0677220/"
         target="_blank"
+        rel="noreferrer"
       >
         <FontAwesomeIcon icon={faGithub} />
       </a>
-      <a
-        href="https://github.com/jtheprogammer"
-        target="_blank"
-      >
+      <a href="https://github.com/jtheprogammer" target="_blank" rel="noreferrer">
         <FontAwesomeIcon icon={faLinkedin} />
       </a>
     </div>
-  )
-}
+  );
+};
 
-export default HeaderSocials
+export default HeaderSocials;

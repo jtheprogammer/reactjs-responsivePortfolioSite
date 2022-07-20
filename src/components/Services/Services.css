@@ -1,6 +1,8 @@
 .services__container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
+  justify-content: center;
 }
 .services__service {
   border: 1px solid #fff;
@@ -37,19 +39,15 @@
 
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */
 @media screen and (max-width: 1024px) {
-
-}
-
-/* ===== MEDIA QUEIRES (MD DEVICES) ===== */
-@media screen and (max-width: 900px) {
   .services__container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    padding-top: 3rem;
   }
 }
 
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
-@media screen and (max-width: 700px) { 
+@media screen and (max-width: 700px) {
   .services__container {
     grid-template-columns: 1fr;
     padding: 2rem;
