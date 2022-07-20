@@ -28,28 +28,25 @@
 .experience__content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 2rem;
+  gap: 2rem;
 }
 
 .experience__details {
   display: flex;
   gap: 1rem;
   align-items: center;
+  padding-left: 2rem;
 }
 
 .experience__details-icon {
   color: var(--color-primary);
 }
 
-.experience__details-description {
-
-}
-
-
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */
 @media screen and (max-width: 1024px) {
   .experience__container {
     grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
   .experience__container > div {
@@ -63,7 +60,14 @@
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
 @media screen and (max-width: 700px) { 
   .experience__container > div {
-    width: 100%;
     gap: 2rem 1rem;
+  }
+
+  .experience__details {
+    padding-left: 0;
+  }
+
+  .experience__details p {
+    display: none;
   }
 }

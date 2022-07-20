@@ -18,7 +18,7 @@ const Experience = () => {
                 icon={faCode}
                 className="experience__details-icon"
               />
-              <div className="experience__details-description">
+              <div>
                 <h4>HTML</h4>
                 <p>Experience...</p>
               </div>
@@ -28,7 +28,7 @@ const Experience = () => {
                 icon={faCode}
                 className="experience__details-icon"
               />
-              <div className="experience__details-description">
+              <div>
                 <h4>HTML</h4>
                 <p>Experience...</p>
               </div>
@@ -44,7 +44,7 @@ const Experience = () => {
                 icon={faCode}
                 className="experience__details-icon"
               />
-              <div className="experience__details-description">
+              <div>
                 <h4>HTML</h4>
                 <p>Experience...</p>
               </div>
@@ -54,7 +54,7 @@ const Experience = () => {
                 icon={faCode}
                 className="experience__details-icon"
               />
-              <div className="experience__details-description">
+              <div>
                 <h4>HTML</h4>
                 <p>Experience...</p>
               </div>
