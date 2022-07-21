@@ -6,6 +6,27 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import "./Contact.css";
 
+const contactOptions = [
+  {
+    field: "Email",
+    info: "jlcjobsearch@gmail.com",
+    icon: (
+      <FontAwesomeIcon icon={faEnvelope} className="contact__option-icon" />
+    ),
+    link: "mailto:jlcjobsearch@gmail.com",
+    caption: "Send A Message!",
+  },
+  {
+    field: "LinkedIn",
+    info: "Jose Luis Cruz",
+    icon: (
+      <FontAwesomeIcon icon={faLinkedin} className="contact__option-icon" />
+    ),
+    link: "https://www.linkedin.com/in/jose-luis-cruz-9a0677220/",
+    caption: "Connect With Me!",
+  },
+];
+
 const Contact = () => {
   const form = useRef();
 
@@ -14,10 +35,10 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        "jlc_resume",
-        "template_s2z87q9",
+        process.env.REACT_APP_EMAILJS_CLIENT_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         form.current,
-        "7ersKOikKD_orZHNs"
+        process.env.REACT_APP_EMAILJS_PUBLIC_API_KEY
       )
       .then(
         (result) => {
@@ -38,48 +59,35 @@ const Contact = () => {
 
       <div className="container contact__container">
         <div className="contact__options">
-          <article className="contact__option">
-            <FontAwesomeIcon
-              icon={faLinkedin}
-              className="contact__option-icon"
-            />
-            <h3>Email</h3>
-            <h4>jlcjobsearch@gmail.com</h4>
-            <a href="mailto:jlcjobsearch@gmail.com">Send A Message!</a>
-          </article>
-          <article className="contact__option">
-            <FontAwesomeIcon
-              icon={faEnvelope}
-              className="contact__option-icon"
-            />
-            <h3>LinkedIn</h3>
-            <h4>Jose Luis Cruz</h4>
-            <a href="https://www.linkedin.com/in/jose-luis-cruz-9a0677220/" 
-              target="_blank"
-              rel="noreferrer"
-            >
-              Connect With Me!
-            </a>
-          </article>
+          {contactOptions.map((option, index) => (
+            <article key={index} className="contact__option">
+              {option.icon}
+              <h3>{option.field}</h3>
+              <h2>{option.info}</h2>
+              <a href={option.link} target="_blank" rel="noreferrer">
+                {option.caption}
+              </a>
+            </article>
+          ))}
         </div>
 
         <form ref={form} onSubmit={sendEmail}>
           <input
             type="text"
             name="name"
-            placeholder="Your Full Name"
+            placeholder="Your Full Name..."
             required
           />
           <input
             type="text"
             name="email"
-            placeholder="Your Email Address"
+            placeholder="Your Email Address..."
             required
           />
           <textarea
             name="message"
             rows="7"
-            placeholder="Your Message"
+            placeholder="Your Message..."
             required
           />
           <button type="submit" className="btn btn-primary">

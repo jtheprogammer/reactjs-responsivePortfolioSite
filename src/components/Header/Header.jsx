@@ -1,12 +1,12 @@
 import React from "react";
-import "./Header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import TextLoop from "react-text-loop";
 
+import "./Header.css";
+import HeaderSocials from "./HeaderSocials";
 import Resume from "../../assets/Text/JoseLuisCruz-Resume.pdf";
 import Me from "../../assets/Images/Me.png";
-import HeaderSocials from "./HeaderSocials";
 
 const textLoopItems = [
   "Developer",
@@ -18,7 +18,7 @@ const textLoopItems = [
 
 const Header = () => {
   return (
-    <header>
+    <header id="home">
       <div className="container header__container">
         <div className="header__greeting">
           <h1>👋</h1>

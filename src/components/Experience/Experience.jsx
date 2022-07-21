@@ -1,7 +1,7 @@
-import React from 'react'
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCode } from "@fortawesome/free-solid-svg-icons"
-import "./Experience.css"
+import React from "react";
+
+import { experienceItems } from "./experienceItems";
+import "./Experience.css";
 
 const Experience = () => {
   return (
@@ -10,60 +10,25 @@ const Experience = () => {
       <h2>My Programming Expertise</h2>
 
       <div className="container experience__container">
-        <div className="experience__frontend">
-          <h3>Frontend Developement</h3>
+      {Object.keys(experienceItems).map((item) => (
+        <div>
+          <h3>{experienceItems[item].title}</h3>
           <div className="experience__content">
+          {Object.keys(experienceItems[item].skills).map((skill) => (
             <article className="experience__details">
-              <FontAwesomeIcon
-                icon={faCode}
-                className="experience__details-icon"
-              />
+            {experienceItems[item].skills[skill].icon}
               <div>
-                <h4>HTML</h4>
-                <p>Experience...</p>
+                <h4>{experienceItems[item].skills[skill].tool}</h4>
+                {/* <p>{experienceItems[item].skills[skill].description}</p> */}
               </div>
             </article>
-            <article className="experience__details">
-              <FontAwesomeIcon
-                icon={faCode}
-                className="experience__details-icon"
-              />
-              <div>
-                <h4>HTML</h4>
-                <p>Experience...</p>
-              </div>
-            </article>
+          ))}
           </div>
         </div>
-
-        <div className="experience__backend">
-        <h3>Backend Developement</h3>
-          <div className="experience__content">
-            <article className="experience__details">
-              <FontAwesomeIcon
-                icon={faCode}
-                className="experience__details-icon"
-              />
-              <div>
-                <h4>HTML</h4>
-                <p>Experience...</p>
-              </div>
-            </article>
-            <article className="experience__details">
-              <FontAwesomeIcon
-                icon={faCode}
-                className="experience__details-icon"
-              />
-              <div>
-                <h4>HTML</h4>
-                <p>Experience...</p>
-              </div>
-            </article>
-          </div>  
-        </div>
+      ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;

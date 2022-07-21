@@ -22,6 +22,11 @@
   transition: var(--transition);
 }
 
+.contact__option h2 {
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
 .contact__option:hover {
   background: transparent;
   border-color: var(--color-primary-variant);
@@ -32,11 +37,15 @@
   margin-bottom: 0.5rem;
 }
 
+.contact__option > h2 {
+  font-size: 1.05rem;
+  margin: 0.5rem 0;
+}
+
 .contact__option > a {
   cursor: pointer;
   display: flex;
-  margin-top: 0.7rem;
-  font-size: 0.75rem;
+  font-size: 1rem;
   justify-content: center;
 }
 
@@ -53,11 +62,17 @@ textarea {
   padding: 1.5rem;
   border: 2px solid var(--color-primary-variant);
   border-radius: 0.5rem;
-  background: transparent;
+  background: linear-gradient(var(--color-primary-variant), transparent);
   resize: none;
   color: var(--color-white);
   font-family: "Oxygen", sans-serif;
   font-size: 1rem;
+  cursor: pointer;
+}
+
+input::placeholder, 
+textarea::placeholder {
+  color: rgb(168, 155, 155)
 }
 
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */
@@ -69,7 +84,7 @@ textarea {
 
   .contact__options {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 

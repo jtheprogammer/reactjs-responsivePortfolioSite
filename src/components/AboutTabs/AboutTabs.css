@@ -45,13 +45,20 @@
 .tab__panel h3 {
   font-weight: 400;
   font-size: 21px;
+  color: yellow;
 }
 
 .tab__panel h4 {
   font-weight: 400;
   font-size: 18px;
   margin: 0.1rem 0 1.25rem 2rem;
-  color: rgb(187, 187, 201);
+  color: white;
+}
+
+.tab__panel h5 {
+  font-weight: 400;
+  font-size: 16px;
+  color: rgb(190, 195, 201);
 }
 
 /* ===== MEDIA QUEIRES (

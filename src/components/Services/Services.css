@@ -16,6 +16,10 @@
   background: linear-gradient(rgb(235, 157, 14), transparent);
 }
 
+.services__service svg {
+  color: "#008bff" !important;
+}
+
 .services__service:hover svg {
   fill: #000;
 }
@@ -37,11 +41,16 @@
   font-size: 1.25rem;
 }
 
+.services__service-content h3,
+.services__service-content-tools {
+  font-size: #008bff;
+}
+
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */
 @media screen and (max-width: 1024px) {
   .services__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     padding-top: 3rem;
   }
 }

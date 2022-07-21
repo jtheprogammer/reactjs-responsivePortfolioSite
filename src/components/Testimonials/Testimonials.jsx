@@ -1,6 +1,4 @@
 import React from "react";
-import "./Testimonials.css";
-import Avatar from "../../assets/Images/Stock-Avatar.jpg";
 import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,18 +6,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
+import Avatar from "../../assets/Images/Stock-Avatar.jpg";
+import "./Testimonials.css";
+
 const testimonialItems = [
   {
-    id: 1,
     image: Avatar,
-    name: "Client Name",
+    name: "Client #1",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam officiis sapiente provident incidunt earum, eaque commodi fugiat ex minus, velit eveniet natus unde nam at laborum, dolores corporis quod suscipit.",
   },
   {
-    id: 2,
     image: Avatar,
-    name: "Client Name",
+    name: "Client #n...",
     review:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam officiis sapiente provident incidunt earum, eaque commodi fugiat ex minus, velit eveniet natus unde nam at laborum, dolores corporis quod suscipit.",
   },
@@ -40,8 +39,8 @@ const Testimonials = () => {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        {testimonialItems.map((item) => (
-          <SwiperSlide className="testimonial" key={item.id}>
+        {testimonialItems.map((item, index) => (
+          <SwiperSlide className="testimonial" key={index}>
             <div className="client__avatar">
               <img src={item.image} alt="Default Avatar" />
             </div>

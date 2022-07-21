@@ -1,5 +1,4 @@
-import React from "react";
-import "./NavBar.css";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHouseChimney,
@@ -10,61 +9,61 @@ import {
   faThumbsUp,
   faMessage,
 } from "@fortawesome/free-solid-svg-icons";
-import { useState } from "react";
+
+import "./NavBar.css";
+
+export const navBarItems = [
+  {
+    name: "Home",
+    link: "home",
+    icon: <FontAwesomeIcon icon={faHouseChimney} />,
+  },
+  {
+    name: "About",
+    link: "about",
+    icon: <FontAwesomeIcon icon={faUser} />,
+  },
+  {
+    name: "Experience",
+    link: "experience",
+    icon: <FontAwesomeIcon icon={faBriefcase} />,
+  },
+  {
+    name: "Portfolio",
+    link: "portfolio",
+    icon: <FontAwesomeIcon icon={faCode} />,
+  },
+  {
+    name: "Services",
+    link: "services",
+    icon: <FontAwesomeIcon icon={faScrewdriverWrench} />,
+  },
+  {
+    name: "Testimonials",
+    link: "testimonials",
+    icon: <FontAwesomeIcon icon={faThumbsUp} />,
+  },
+  {
+    name: "Contact",
+    link: "contact",
+    icon: <FontAwesomeIcon icon={faMessage} />,
+  },
+];
 
 const NavBar = () => {
-  const [activeNav, setActiveNav] = useState("#");
+  const [activeNav, setActiveNav] = useState("#home");
   return (
     <nav>
-      <a
-        href="#home"
-        onClick={() => setActiveNav("#home")}
-        className={activeNav === "#" ? "active" : ""}
-      >
-        <FontAwesomeIcon icon={faHouseChimney} />
-      </a>
-      <a
-        href="#about"
-        onClick={() => setActiveNav("#about")}
-        className={activeNav === "#about" ? "active" : ""}
-      >
-        <FontAwesomeIcon icon={faUser} />
-      </a>
-      <a
-        href="#portfolio"
-        onClick={() => setActiveNav("#portfolio")}
-        className={activeNav === "#portfolio" ? "active" : ""}
-      >
-        <FontAwesomeIcon icon={faCode} />
-      </a>
-      <a
-        href="#experience"
-        onClick={() => setActiveNav("#experience")}
-        className={activeNav === "#experience" ? "active" : ""}
-      >
-        <FontAwesomeIcon icon={faBriefcase} />
-      </a>
-      <a
-        href="#services"
-        onClick={() => setActiveNav("#services")}
-        className={activeNav === "#services" ? "active" : ""}
-      >
-        <FontAwesomeIcon icon={faScrewdriverWrench} />
-      </a>
-      <a
-        href="#testimonials"
-        onClick={() => setActiveNav("#testimonials")}
-        className={activeNav === "#testimonials" ? "active" : ""}
-      >
-        <FontAwesomeIcon icon={faThumbsUp} />
-      </a>
-      <a
-        href="#contact"
-        onClick={() => setActiveNav("#contact")}
-        className={activeNav === "#contact" ? "active" : ""}
-      >
-        <FontAwesomeIcon icon={faMessage} />
-      </a>
+      {navBarItems.map((item, index) => (
+        <a
+          key={index}
+          href={`#${item.link}`}
+          onClick={() => setActiveNav(`#${item.link}`)}
+          className={activeNav === `#${item.link}` ? "active" : ""}
+        >
+          {item.icon}
+        </a>
+      ))}
     </nav>
   );
 };
