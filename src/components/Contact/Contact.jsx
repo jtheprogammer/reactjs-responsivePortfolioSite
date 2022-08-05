@@ -22,7 +22,7 @@ const contactOptions = [
     icon: (
       <FontAwesomeIcon icon={faLinkedin} className="contact__option-icon" />
     ),
-    link: "https://www.linkedin.com/in/jose-luis-cruz-9a0677220/",
+    link: "https://www.linkedin.com/in/jose-luis-cruz-jr/",
     caption: "Connect With Me!",
   },
 ];

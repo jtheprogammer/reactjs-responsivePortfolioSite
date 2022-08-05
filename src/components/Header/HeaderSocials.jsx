@@ -4,11 +4,11 @@ import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 
 export const socialItems = [
   {
-    link: "https://www.linkedin.com/in/jose-cruz-9a0677220/",
+    link: "https://www.linkedin.com/in/jose-luis-cruz-jr/",
     icon: <FontAwesomeIcon icon={faLinkedin} />,
   },
   {
-    link: "https://github.com/jtheprogammer",
+    link: "https://github.com/jtpgmr",
     icon: <FontAwesomeIcon icon={faGithub} />,
   },
 ];
