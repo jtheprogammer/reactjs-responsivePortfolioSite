@@ -30,13 +30,13 @@ export const experienceItems = {
     skills: [
       {
         id: "frontend1",
-        tool: "HTML",
+        tool: "HTML5",
         icon: <FontAwesomeIcon 
                icon={faHtml5} className="experience__details-icon" style={{ color: "#F66B0E"}} />,
       },
       {
         id: "frontend2",
-        tool: "CSS",
+        tool: "CSS3",
         icon: <FontAwesomeIcon 
         icon={faCss3Alt} className="experience__details-icon" style={{ color: "#264de4"}} />,
       },
@@ -48,7 +48,7 @@ export const experienceItems = {
       },
       {
         id: "frontend4",
-        tool: "JS",
+        tool: "JavaScript",
         icon: <FontAwesomeIcon 
         icon={faJsSquare} className="experience__details-icon" style={{ color:"#F8CB2E"}} />,
       },

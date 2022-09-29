@@ -9,8 +9,11 @@ import AboutTabs from "../AboutTabs/AboutTabs";
 const About = () => {
   return (
     <section id="about">
+          {/* {console.log(document.getElementById("about").scrollHeight)} */}
+      <div className="section__header" >
       <h4>Get To Know</h4>
       <h2>About Me</h2>
+      </div>
 
       <div className="container about__container">
         <div className="about__me">
@@ -24,17 +27,17 @@ const About = () => {
             <article className="about__card">
               <FontAwesomeIcon icon={faBriefcase} />
               <h3>Education</h3>
-              <p>3+ Years as a Graduate-level Biology Researcher</p>
+              <p>3+ Years as a PhD Candidate in Immunology</p>
             </article>
             <article className="about__card">
               <FontAwesomeIcon icon={faFileCode} />
               <h3>Coding</h3>
-              <p>1.5+ Years of Personal Programming Experience</p>
+              <p>2+ Years of Personal Programming Experience</p>
             </article>
             <article className="about__card">
               <FontAwesomeIcon icon={faGithub} />
               <h3>Portfolio</h3>
-              <p>7 Completed Projects Posted Publically on GitHub</p>
+              <p>10 Completed Projects Posted Publically on GitHub</p>
             </article>
           </div>
           <div className="about__tabs">

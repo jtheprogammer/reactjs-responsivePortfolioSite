@@ -6,8 +6,10 @@ import "./Experience.css";
 const Experience = () => {
   return (
     <section id="experience">
+      <div className="section__header" >
       <h4>A Brief Look Into</h4>
       <h2>My Programming Expertise</h2>
+      </div>
 
       <div className="container experience__container">
       {Object.keys(experienceItems).map((item) => (

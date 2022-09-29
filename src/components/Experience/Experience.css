@@ -1,8 +1,7 @@
 .experience__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
-  width: 80%;
+  gap: 3rem;
   padding-top: 4rem;
 }
 
@@ -31,16 +30,15 @@
 .experience__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  justify-content: space-between;
+  gap: 2rem 5rem;
 }
 
 .experience__details {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   text-align: center;
-  gap: 1rem 2rem;
+  gap: 1rem;
 }
 
 .experience__details h4 {
@@ -49,6 +47,9 @@
   letter-spacing: 2px;
 }
 
+.experience__details svg {
+  margin-left: 1rem;
+}
 
 .experience__details-icon {
   color: var(--color-primary);
@@ -74,11 +75,18 @@
   }
 
   .experience__container > div {
-    width: 80%;
     gap: 2rem;
     padding: 2rem;
     margin: 0 auto;
+    width: 350px;
   }
+
+  .experience__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  justify-content: center;
+}
 }
 
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
@@ -90,6 +98,10 @@
   .experience__details {
     flex-direction: column-reverse;
   }
+
+  .experience__details svg {
+  margin-left: 0rem;
+}
 
   .experience__details h4 {
   font-size: 1rem;
@@ -122,6 +134,10 @@
 
   .experience__content {
   display: grid;
-  grid-template-columns: 1fr
+  margin: auto;
+}
+
+.experience__details {
+  gap: 0.25rem
 }
 }

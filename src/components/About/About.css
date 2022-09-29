@@ -35,6 +35,10 @@
   transform: rotate(0deg);
 }
 
+.about__me-image img {
+  cursor: pointer;
+}
+
 /* === CARDS === */
 .about__cards {
   display: grid;
@@ -50,27 +54,31 @@
   padding: 2rem;
   text-align: center;
   transition: var(--transition);
-  cursor: default;
+  cursor: pointer;
 }
 
 .about__card > svg {
   font-size: 30px;
   margin-bottom: 1rem;
+  cursor: pointer;
 }
 
 .about__card > h3 {
+  font-size: 27px;
   font-weight: 600;
   padding: 0.25rem 0;
+  cursor: pointer;
 }
 
 .about__card > p {
-  font-size: 17px;
+  font-size: 20px;
   color: var(--color-light);
+  cursor: pointer;
 }
 
 .about__card:hover {
   border-color: var(--color-primary-variant);
-  transform: scale(1.1);
+  transform: scale(1.05);
   background: linear-gradient(var(--color-primary-variant), transparent);
 }
 
@@ -81,10 +89,6 @@
 
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */
 @media screen and (max-width: 1024px) {
-  section#about {
-    padding-top: 15rem;
-  }
-
   .about__container {
     grid-template-columns: 1fr;
     gap: 0;
@@ -92,8 +96,8 @@
   }
 
   .about__me {
-    width: 50%;
-    margin: 2rem auto 4rem;
+    width: 40%;
+    margin: 2rem auto 3rem;
   }
 
   .about__cards {
@@ -117,7 +121,7 @@
   SM DEVICES) ===== */
 @media screen and (max-width: 700px) {
   .about__container {
-    padding: 0;
+    padding: 0 2rem;
   }
 
   .about__me {
@@ -127,11 +131,6 @@
 
   .about__cards {
     grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-
-  .about__card {
-    padding: 1rem 1rem;
   }
 
   .about__card p {
@@ -141,11 +140,19 @@
   .about_content {
     text-align: center;
   }
+
+  .about__card > h3 {
+  font-size: 24px;
+}
+
+.about__card > p {
+  font-size: 18px;
+  color: var(--color-light);
+  cursor: pointer;
+}
 }
 
 /* ===== MEDIA QUEIRES (XS DEVICES) ===== */
 @media screen and (max-width: 400px) and (max-height: 700px) {
-  section#about {
-    margin-top: 22.5rem;
-  }
+
 }

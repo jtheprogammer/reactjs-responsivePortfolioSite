@@ -1,19 +1,29 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { About, Contact, Experience, Footer, Header, 
   NavBar, Portfolio, Services, Testimonials } from "./components"
 
 const App = () => {
+
+  //   useEffect(() => {
+  //   for (let item of navBarItems) {
+  //     if (document.getElementById(`#${experienceRef}`).scrollHeight === windowHeight) {
+  //     console.log(item.link)
+  //     }
+  //   }
+  // })
+
+
   return (
     <>
-      <Header />
       <NavBar />
+      <Header />
       <About />
       <Experience />
-      <Portfolio />
+      {/* <Portfolio />
       <Services />
       <Testimonials />
       <Contact />
-      <Footer />
+      <Footer /> */}
     </>
   )
 }

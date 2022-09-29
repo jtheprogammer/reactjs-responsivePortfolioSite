@@ -1,59 +1,35 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faHouseChimney,
-  faUser,
-  faCode,
-  faBriefcase,
-  faScrewdriverWrench,
-  faThumbsUp,
-  faMessage,
-} from "@fortawesome/free-solid-svg-icons";
 
+import navBarItems from "./navBarItems";
 import "./NavBar.css";
+import useWindowHeight from "../../custom_hooks/useWindowHeight";
+import { useEffect } from "react";
 
-export const navBarItems = [
-  {
-    name: "Home",
-    link: "home",
-    icon: <FontAwesomeIcon icon={faHouseChimney} />,
-  },
-  {
-    name: "About",
-    link: "about",
-    icon: <FontAwesomeIcon icon={faUser} />,
-  },
-  {
-    name: "Experience",
-    link: "experience",
-    icon: <FontAwesomeIcon icon={faBriefcase} />,
-  },
-  {
-    name: "Portfolio",
-    link: "portfolio",
-    icon: <FontAwesomeIcon icon={faCode} />,
-  },
-  {
-    name: "Services",
-    link: "services",
-    icon: <FontAwesomeIcon icon={faScrewdriverWrench} />,
-  },
-  {
-    name: "Testimonials",
-    link: "testimonials",
-    icon: <FontAwesomeIcon icon={faThumbsUp} />,
-  },
-  {
-    name: "Contact",
-    link: "contact",
-    icon: <FontAwesomeIcon icon={faMessage} />,
-  },
-];
+
 
 const NavBar = () => {
   const [activeNav, setActiveNav] = useState("#home");
+  const [navStyle, setNavStyle] = useState("NavBar__top")
+  const windowHeight = useWindowHeight();
+
+  useEffect(() => {
+    if (windowHeight < 80) {
+      setNavStyle("NavBar__top")
+    } else {
+      setNavStyle("NavBar__fixed")
+    }
+  }, [windowHeight, navStyle])
+
+
   return (
-    <nav>
+    <nav 
+      className={navStyle}
+    >
+      <div className="NavBar__left">
+        <h1>JLC</h1>
+      </div>
+
+      <div className="NavBar__right">
       {navBarItems.map((item, index) => (
         <a
           key={index}
@@ -61,9 +37,10 @@ const NavBar = () => {
           onClick={() => setActiveNav(`#${item.link}`)}
           className={activeNav === `#${item.link}` ? "active" : ""}
         >
-          {item.icon}
+          {navStyle === "NavBar__top" ? <>{item.name}</> : <>{item.icon}</>}
         </a>
       ))}
+      </div>
     </nav>
   );
 };

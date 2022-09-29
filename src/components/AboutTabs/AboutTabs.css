@@ -1,7 +1,9 @@
 .tabs__container {
   background: var(--color-primary-variant);
-  padding: 2rem;
+  padding: 2rem 2rem 1.5rem;
   border-radius: 2rem;
+  max-height: 550px;
+  overflow-y: scroll;
 }
 
 .react-tabs__tab-list {
@@ -64,6 +66,11 @@
 /* ===== MEDIA QUEIRES (
   SM DEVICES) ===== */
 @media screen and (max-width: 700px) {
+
+  .tabs__container {
+    max-width: 475px;
+    margin: auto;
+  }
   .react-tabs__tab-list {
     font-size: 1.25rem;
   }

@@ -1,16 +1,45 @@
-nav {
+.NavBar__top {
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.5% 2.5%;
+  height: 100px;
+  margin-bottom: 40px;
+}
+
+/* .nav__hidden {
+  transform: translateY(calc(-1 * 100px));
+} */
+
+.NavBar__right {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.NavBar__right a {
+  font-size: 25px;
+  color: gainsboro;
+}
+
+.NavBar__fixed {
   background: rgba(0, 0, 0, 0.2);
   display: flex;
-  padding: 0.7rem;
+  padding: 1rem;
   position: fixed;
   bottom: 2rem;
-  left: 50%;
+  left: 49.2%;
   transform: translate(-50%);
   width: max-content;
   z-index: 2;
-  gap: 1.5rem;
   border-radius: 3rem;
   backdrop-filter: blur(2rem);
+  transition: 0.5s ease;
+  transition-timing-function: ease-in-out;
+}
+
+.NavBar__fixed h1 {
+  display: none;
 }
 
 nav a {
@@ -40,7 +69,6 @@ nav svg {
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */
 @media screen and (max-width: 1024px) {
   nav {
-    gap: 1.5rem;
     margin: auto;
     padding: 1.75rem 1.5rem;
   }
@@ -58,6 +86,6 @@ nav svg {
   SM DEVICES) ===== */
 @media screen and (max-width: 700px) {
   nav {
-    display: none;
+    display: none !important;
   }
 }
