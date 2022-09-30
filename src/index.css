@@ -27,23 +27,25 @@
   --transition: all 400ms ease;
 }
 
-html {
-  scroll-behavior: smooth;
+.mt-150 {
+  margin-top: 180px;
 }
 
-::-webkit-scrollbar {
-  display: none;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Oxygen", sans-serif;
   color: var(--color-white);
   line-height: 1.7;
-  background-color: #040d24;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg fill-opacity='0.78'%3E%3Cpolygon fill='%23091436' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%23111c46' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%231b2453' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23272e5f' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23353A68' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background: linear-gradient(-45deg, #242a5f, #101e56,#222a65, #312c4f);
   background-attachment: fixed;
   background-size: cover;
+  user-select: none;
+  cursor: transparent;
 }
+
 
 /* ===== GENERAL STYLES ===== */
 .container {
@@ -65,7 +67,23 @@ h1 {
 
 section {
   height: auto;
-  margin-bottom: 6.25rem;
+  padding: 3rem 0;
+}
+
+#tsparticles {
+  height: 100%;
+  width: 100%;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 2px solid black ;
+}
+
+.section__header {
+  margin-bottom: 3rem;
 }
 
 .section__header > h2,
@@ -116,9 +134,7 @@ a:hover {
 }
 
 img {
-  display: block;
   width: 100%;
-  object-fit: cover;
 }
 
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */

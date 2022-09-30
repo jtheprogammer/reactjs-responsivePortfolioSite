@@ -1,30 +1,38 @@
 .experience__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
-  padding-top: 4rem;
+  gap: 2rem;
+  width: 90%;
 }
 
 .experience__container > div {
-  background: var(--color-bg-variant);
-  padding: 2.4rem 5rem;
+  background: url("../../assets/Banners/banner-card.svg");
+  background-repeat: no-repeat;
+  padding: 2.5rem 4.5rem;
   border-radius: 2rem;
-  border: 1px solid transparent;
+  border: 2px solid black;
   transition: var(--transition);
+  background-position-y: -6rem;
 }
+
 
 .experience__container > div:hover {
   background: linear-gradient(var(--color-primary-variant), transparent);
   border-color: var(--color-primary-variant);
   cursor: default;
-  transform: scale(1.1);
+  transform: scale(1.075);
+}
+
+.experience__container > div:hover .experience__content h4 {
+  color: white;
 }
 
 .experience__container > div h3 {
   text-align: center;
   font-size: 1.75rem;
   margin-bottom: 2rem;
-  color: var(--color-primary)
+  color: var(--color-primary);
+  font-weight: 700;
 }
 
 .experience__content {
@@ -32,6 +40,7 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem 5rem;
 }
+
 
 .experience__details {
   display: flex;
@@ -45,10 +54,11 @@
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 2px;
+  color: var(--color-bg-variant);
 }
 
 .experience__details svg {
-  margin-left: 1rem;
+
 }
 
 .experience__details-icon {
@@ -61,7 +71,6 @@
   .experience__container {
     grid-template-columns: 1fr;
     gap: 3rem;
-    padding-top: 2rem;
     width: 60%;
   }
 }
@@ -71,7 +80,6 @@
   .experience__container {
     grid-template-columns: 1fr;
     gap: 3rem;
-    padding-top: 2rem;
   }
 
   .experience__container > div {
@@ -98,10 +106,6 @@
   .experience__details {
     flex-direction: column-reverse;
   }
-
-  .experience__details svg {
-  margin-left: 0rem;
-}
 
   .experience__details h4 {
   font-size: 1rem;

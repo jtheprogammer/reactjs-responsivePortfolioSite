@@ -1,15 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./About.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBriefcase, faFileCode } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import Me from "../../assets/Images/About-Me.jpg";
 import AboutTabs from "../AboutTabs/AboutTabs";
+import { ActiveNavContext } from "../../context";
 
 const About = () => {
+  const { aboutRef } =
+  useContext(ActiveNavContext);
   return (
-    <section id="about">
-          {/* {console.log(document.getElementById("about").scrollHeight)} */}
+    <section id="about" ref={aboutRef}>
+
+         
       <div className="section__header" >
       <h4>Get To Know</h4>
       <h2>About Me</h2>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
@@ -10,6 +10,7 @@ import NativeApp from "../../assets/Images/ReactNativeNFTApp/React-Native-Expo.j
 import PromotionalApp from "../../assets/Images/PromotionalSite/Promotional-Site.jpg"
 import Robinhood from "../../assets/Images/RobinhoodClone/Robinhood-UI.jpg";
 import Crypto from "../../assets/Images/CryptoAPI/main.jpg";
+import { ActiveNavContext } from "../../context";
 
 const baseGhUrl = "https://github.com/jtpgmr"
 const portfolioItems = [
@@ -58,10 +59,14 @@ const portfolioItems = [
 ];
 
 const Portfolio = () => {
+  const { portfolioRef } =
+  useContext(ActiveNavContext);
   return (
-    <section id="portfolio">
+    <section id="portfolio" ref={portfolioRef}>
+        <div className="section__header" >
       <h4>The Projects I've Completed</h4>
       <h2>On My Programming Journey</h2>
+      </div>
 
       <div className="container portfolio__container">
         {portfolioItems.map((item, index) => (

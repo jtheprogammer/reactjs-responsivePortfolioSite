@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -8,6 +8,7 @@ import "swiper/css/scrollbar";
 
 import Avatar from "../../assets/Images/Stock-Avatar.jpg";
 import "./Testimonials.css";
+import { ActiveNavContext } from "../../context";
 
 const testimonialItems = [
   {
@@ -25,10 +26,14 @@ const testimonialItems = [
 ];
 
 const Testimonials = () => {
+  const { testimonialsRef } =
+  useContext(ActiveNavContext);
   return (
-    <section id="testimonials">
+    <section id="testimonials" ref={testimonialsRef}>
+        <div className="section__header" >
       <h4>(Be My First Client!)</h4>
       <h2>Testimonials</h2>
+      </div>
 
       <Swiper
         className="container testimonials__container"

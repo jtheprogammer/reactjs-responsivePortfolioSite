@@ -12,15 +12,17 @@ import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
 import {
   SiExpress,
   SiDjango,
+  SiD3Dotjs,
+  SiGraphql,
   SiMongodb,
   SiMaterialui,
-  SiMysql,
+  SiPostgresql,
   SiPowerbi,
   SiPandas,
   SiNumpy,
   SiScikitlearn,
   SiStreamlit,
-  SiD3Dotjs
+  SiTailwindcss,
 } from "react-icons/si";
 import { IoLogoTableau } from "react-icons/io5"
 
@@ -42,15 +44,15 @@ export const experienceItems = {
       },
       {
         id: "frontend3",
-        tool: "Bootstrap",
-        icon: <FontAwesomeIcon 
-        icon={faBootstrap} className="experience__details-icon" style={{ color:"#8465b3"}} />,
-      },
-      {
-        id: "frontend4",
         tool: "JavaScript",
         icon: <FontAwesomeIcon 
         icon={faJsSquare} className="experience__details-icon" style={{ color:"#F8CB2E"}} />,
+      },
+      {
+        id: "frontend4",
+        tool: "Bootstrap",
+        icon: <FontAwesomeIcon 
+        icon={faBootstrap} className="experience__details-icon" style={{ color:"#8465b3"}} />,
       },
       {
         id: "frontend5",
@@ -62,12 +64,17 @@ export const experienceItems = {
         id: "frontend6",
         tool: "React Native",
         icon: <FontAwesomeIcon 
-        icon={faReact} className="experience__details-icon" style={{ color:"#6FDFDF", background: "gray", borderRadius: "50%", padding: "0.25rem" }} />,
+        icon={faReact} className="experience__details-icon" style={{ color:"#6FDFDF", background: "#595959", borderRadius: "50%", padding: "0.25rem" }} />,
       },
       {
         id: "frontend7",
+        tool: "TailWind",
+        icon: <SiTailwindcss className="experience__details-icon" style={{ color:"#0ea5e9", padding: "0.25rem", borderRadius: "100%", background: "white" }} />,
+      },
+      {
+        id: "frontend8",
         tool: "Material UI",
-        icon: <SiMaterialui className="experience__details-icon" style={{ color:"#007FFF"}} />,
+        icon: <SiMaterialui className="experience__details-icon" style={{ color:"#0066cc" }} />,
       },
     ],
   },
@@ -78,7 +85,7 @@ export const experienceItems = {
         id: "backend1",
         tool: "NodeJS",
         icon: <FontAwesomeIcon 
-        icon={faNodeJs} className="experience__details-icon" style={{ color:"#026e00", background: "black", borderRadius: "30%", padding: "0.025rem"}} />,
+        icon={faNodeJs} className="experience__details-icon" style={{ color:"#1D6F42" }} />,
       },
       {
         id: "backend2",
@@ -93,18 +100,23 @@ export const experienceItems = {
       },
       {
         id: "backend4",
-        tool: "Django",
-        icon: <SiDjango className="experience__details-icon" style={{ color:"lightslategray" }} />,
+        tool: "Graph QL",
+        icon: <SiGraphql className="experience__details-icon" style={{ color:"#e535ab" }} />,
       },
       {
         id: "backend5",
-        tool: "Relational DBs",
-        icon: <SiMysql className="experience__details-icon" style={{ color:"#0E86D4", fontSize: "3rem"}} />,
+        tool: "Django",
+        icon: <SiDjango className="experience__details-icon" style={{ color:"white" }} />,
       },
       {
         id: "backend6",
+        tool: "Relational DBs",
+        icon: <SiPostgresql className="experience__details-icon" style={{ color:"white", fontSize: "3rem" }} />,
+      },
+      {
+        id: "backend7",
         tool: "NoSQL DBs",
-        icon: <SiMongodb className="experience__details-icon" style={{ color:"#3fa037"}} />,
+        icon: <SiMongodb className="experience__details-icon" style={{ color:"#3fa037", background: "#00004d", padding: "4px", borderRadius: "100%" }} />,
       },
     ],
   },
@@ -139,6 +151,52 @@ export const experienceItems = {
       },
       {
         id: "da6",
+        tool: "Tableau",
+        icon: <IoLogoTableau className="experience__details-icon" style={{ color:"#fff"}} />,
+      },
+      {
+        id: "da7",
+        tool: "Streamlit",
+        icon: <SiStreamlit className="experience__details-icon" style={{ color:"#f63366"}} />,
+      },
+      {
+        id: "da8",
+        tool: "D3.js",
+        icon: <SiD3Dotjs className="experience__details-icon" style={{ color:"#F9A03C"}} />,
+      },
+    ],
+  },
+  infoTech: {
+    title: "Information Technology",
+    skills: [
+      {
+        id: "it1",
+        tool: "Excel",
+        icon: <FontAwesomeIcon 
+        icon={faFileExcel} className="experience__details-icon" style={{ color:"#1D6F42" }} />,
+      },
+      {
+        id: "it2",
+        tool: "Pandas",
+        icon: <SiPandas className="experience__details-icon" style={{ color:"#130654", background: "#fff", padding: "2px 0 2px 0", borderRadius: "7.5px" }} />,
+      },
+      {
+        id: "it3",
+        tool: "NumPy",
+        icon: <SiNumpy className="experience__details-icon" style={{ color:"#7ad7f0"}} />,
+      },
+      {
+        id: "it4",
+        tool: "Scikit-learn",
+        icon: <SiScikitlearn className="experience__details-icon" style={{ color:"F28C28" }} />,
+      },
+      {
+        id: "it5",
+        tool: "PowerBI",
+        icon: <SiPowerbi className="experience__details-icon" style={{ color:"#f2c80f", background: "#000", padding: "4px", borderRadius: "7.5px" }} />,
+      },
+      {
+        id: "it6 ",
         tool: "Tableau",
         icon: <IoLogoTableau className="experience__details-icon" style={{ color:"#fff"}} />,
       },

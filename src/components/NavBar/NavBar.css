@@ -6,7 +6,14 @@
   padding: 2.5% 2.5%;
   height: 100px;
   margin-bottom: 40px;
+  transition: var(--transition);
 }
+
+.NavBar__top {
+
+}
+
+
 
 /* .nav__hidden {
   transform: translateY(calc(-1 * 100px));
@@ -14,11 +21,12 @@
 
 .NavBar__right {
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin: 0;
 }
 
 .NavBar__right a {
-  font-size: 25px;
+  font-size: 20px;
   color: gainsboro;
 }
 
@@ -28,14 +36,13 @@
   padding: 1rem;
   position: fixed;
   bottom: 2rem;
-  left: 49.2%;
+  left: 50%;
   transform: translate(-50%);
-  width: max-content;
   z-index: 2;
   border-radius: 3rem;
   backdrop-filter: blur(2rem);
-  transition: 0.5s ease;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in;
+  transition: var(--transition);
 }
 
 .NavBar__fixed h1 {
@@ -64,6 +71,12 @@ nav a:hover {
 nav svg {
   font-size: 1.25rem;
   cursor: pointer;
+}
+
+@media screen and (max-width: 1250px) { 
+  .NavBar__right a {
+    font-size: 18px;
+  }
 }
 
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */

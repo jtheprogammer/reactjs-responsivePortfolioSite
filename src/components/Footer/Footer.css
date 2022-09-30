@@ -1,9 +1,11 @@
 footer {
-  background: var(--color-primary);
   padding: 3rem 0;
   text-align: center;
   font-size: 1.25rem;
   margin-top: 7rem;
+  background: url("../../assets/Banners/banner-footer.svg");
+  background-repeat: no-repeat;
+  background-position-y: 1rem;
 }
 
 footer a {
@@ -16,7 +18,11 @@ footer a {
   flex-wrap: wrap;
   justify-content: center;
   gap: 4rem;
-  margin: 0 auto 3rem;
+  margin: 2rem 0 2.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--color-bg-variant);
 }
 
 .footer__socials {

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { VscServerProcess } from "react-icons/vsc"
 import { RiBarChart2Fill } from "react-icons/ri"
 import { WebLogo } from "./ServicesSvgs";
 import "./Services.css";
+import { ActiveNavContext } from "../../context";
 
 export const ServiceList = [
   {
@@ -27,11 +28,15 @@ export const ServiceList = [
 
 const Services = ({ item }) => {
   const ServiceContent = ServiceList.slice(0, item);
+  const { servicesRef } =
+  useContext(ActiveNavContext);
 
   return (
-    <section id="services">
-      <h4>Take a Look At</h4>
+    <section id="services" ref={servicesRef}>
+       <div className="section__header" >
+      <h4>Take a Look at</h4>
       <h2>The Services I Offer</h2>
+      </div>
       <div className="container services__container">
         {ServiceContent.map((val, i) => (
           <div className="services__service" key={i}>
@@ -40,8 +45,8 @@ const Services = ({ item }) => {
               <div className="services__service-content">
                 <h3>{val.title}</h3>
                 <p>{val.description}</p>
-                <h4>Tools I use</h4>
-                <p className="services__service-content-tools">{val.tools}</p>
+                {/* <h4>Tools I use</h4>
+                <p className="services__service-content-tools">{val.tools}</p> */}
               </div>
             </center>
           </div>

@@ -1,29 +1,26 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { About, Contact, Experience, Footer, Header, 
   NavBar, Portfolio, Services, Testimonials } from "./components"
+import CustomParticles from './components/CustomParticles'
+import { ActiveNavContextProvider } from './context';
 
 const App = () => {
 
-  //   useEffect(() => {
-  //   for (let item of navBarItems) {
-  //     if (document.getElementById(`#${experienceRef}`).scrollHeight === windowHeight) {
-  //     console.log(item.link)
-  //     }
-  //   }
-  // })
-
-
   return (
     <>
+    <ActiveNavContextProvider>
       <NavBar />
       <Header />
+
       <About />
+
       <Experience />
-      {/* <Portfolio />
+      <Portfolio />
       <Services />
       <Testimonials />
       <Contact />
-      <Footer /> */}
+      <Footer />
+      </ActiveNavContextProvider>
     </>
   )
 }

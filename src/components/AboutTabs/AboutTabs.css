@@ -2,7 +2,7 @@
   background: var(--color-primary-variant);
   padding: 2rem 2rem 1.5rem;
   border-radius: 2rem;
-  max-height: 550px;
+  height: 450px;
   overflow-y: scroll;
 }
 

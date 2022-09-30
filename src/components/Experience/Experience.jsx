@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import { experienceItems } from "./experienceItems";
 import "./Experience.css";
+import { ActiveNavContext } from "../../context";
 
 const Experience = () => {
+  const { experienceRef } =
+  useContext(ActiveNavContext);
   return (
-    <section id="experience">
+    <section id="experience" ref={experienceRef}>
       <div className="section__header" >
       <h4>A Brief Look Into</h4>
       <h2>My Programming Expertise</h2>

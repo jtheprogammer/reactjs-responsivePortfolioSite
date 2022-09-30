@@ -1,10 +1,11 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
 import "./Contact.css";
+import { ActiveNavContext } from "../../context";
 
 const contactOptions = [
   {
@@ -29,6 +30,8 @@ const contactOptions = [
 
 const Contact = () => {
   const form = useRef();
+  const { contactRef } =
+  useContext(ActiveNavContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -53,7 +56,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact">
+    <section id="contact" ref={contactRef}>
       <h4>Get In Touch</h4>
       <h2>Contact Me</h2>
 
