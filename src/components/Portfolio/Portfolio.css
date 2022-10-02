@@ -20,6 +20,10 @@
   transform: scale(1.1);
 }
 
+.portfolio__item path {
+  cursor: pointer;
+}
+
 .portfolio__item-image {
   border-radius: 1.5rem;
   overflow: hidden;
@@ -81,5 +85,11 @@
 
   .portfolio__item-text p {
     margin: 0;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .portfolio__item-text p {
+    text-align: center;
   }
 }

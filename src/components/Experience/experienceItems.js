@@ -10,6 +10,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
 import {
+  SiAmazonaws,
   SiExpress,
   SiDjango,
   SiD3Dotjs,
@@ -23,8 +24,11 @@ import {
   SiScikitlearn,
   SiStreamlit,
   SiTailwindcss,
+  SiWindows
 } from "react-icons/si";
-import { IoLogoTableau } from "react-icons/io5"
+import { FcGoogle, FcLinux } from "react-icons/fc"
+import { GrVmware } from "react-icons/gr"
+import { IoLogoTableau, IoHardwareChip } from "react-icons/io5"
 
 export const experienceItems = {
   frontend: {
@@ -100,7 +104,7 @@ export const experienceItems = {
       },
       {
         id: "backend4",
-        tool: "Graph QL",
+        tool: "GraphQL",
         icon: <SiGraphql className="experience__details-icon" style={{ color:"#e535ab" }} />,
       },
       {
@@ -171,44 +175,38 @@ export const experienceItems = {
     skills: [
       {
         id: "it1",
-        tool: "Excel",
-        icon: <FontAwesomeIcon 
-        icon={faFileExcel} className="experience__details-icon" style={{ color:"#1D6F42" }} />,
+        tool: "Windows",
+        icon: <SiWindows className="experience__details-icon" style={{ color:"white" }} />,
       },
       {
         id: "it2",
-        tool: "Pandas",
-        icon: <SiPandas className="experience__details-icon" style={{ color:"#130654", background: "#fff", padding: "2px 0 2px 0", borderRadius: "7.5px" }} />,
+        tool: "Linux",
+        icon: <FcLinux className="experience__details-icon" />,
       },
       {
         id: "it3",
-        tool: "NumPy",
+        tool: "MacOS",
         icon: <SiNumpy className="experience__details-icon" style={{ color:"#7ad7f0"}} />,
       },
       {
         id: "it4",
-        tool: "Scikit-learn",
-        icon: <SiScikitlearn className="experience__details-icon" style={{ color:"F28C28" }} />,
+        tool: "Virtualization",
+        icon: <GrVmware className="experience__details-icon" style={{ color:"black" }} />,
       },
       {
-        id: "it5",
-        tool: "PowerBI",
-        icon: <SiPowerbi className="experience__details-icon" style={{ color:"#f2c80f", background: "#000", padding: "4px", borderRadius: "7.5px" }} />,
+        id: "it5 ",
+        tool: "AWS",
+        icon: <SiAmazonaws className="experience__details-icon" style={{ color:"#FF9900"}} />,
       },
       {
-        id: "it6 ",
-        tool: "Tableau",
-        icon: <IoLogoTableau className="experience__details-icon" style={{ color:"#fff"}} />,
+        id: "da6",
+        tool: "GCP",
+        icon: <FcGoogle className="experience__details-icon" />,
       },
       {
-        id: "da7",
-        tool: "Streamlit",
-        icon: <SiStreamlit className="experience__details-icon" style={{ color:"#f63366"}} />,
-      },
-      {
-        id: "da8",
-        tool: "D3.js",
-        icon: <SiD3Dotjs className="experience__details-icon" style={{ color:"#F9A03C"}} />,
+        id: "it7",
+        tool: "PC Hardware",
+        icon: <IoHardwareChip className="experience__details-icon" style={{ color:"silver" }} />,
       },
     ],
   },

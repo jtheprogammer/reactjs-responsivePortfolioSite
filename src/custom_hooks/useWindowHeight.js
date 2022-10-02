@@ -14,9 +14,7 @@ export const useWindowHeight = () => {
     }
 
     if (isWindowClient) {
-      window.addEventListener("scroll", setSize);
-
-      return () => window.removeEventListener("scroll", setSize);
+      return window.addEventListener("scroll", setSize);
     }
   }, [isWindowClient, setWindowHeight, windowHeight]);
   return windowHeight;

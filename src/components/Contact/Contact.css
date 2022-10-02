@@ -1,4 +1,7 @@
 /* === CONTACT OPTIONS === */
+section#contact {
+  padding: 3rem 0 0 0;
+}
 .contact__container {
   width: 70%;
   display: grid;
@@ -73,6 +76,13 @@ textarea {
 input::placeholder, 
 textarea::placeholder {
   color: rgb(168, 155, 155)
+}
+
+@media screen and (max-width: 1250px) {
+  .contact__option > h2 {
+    font-size: 0.8rem;
+    margin: 0.5rem 0;
+  }
 }
 
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */

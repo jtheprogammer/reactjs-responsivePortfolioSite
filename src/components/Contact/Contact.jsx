@@ -57,8 +57,10 @@ const Contact = () => {
 
   return (
     <section id="contact" ref={contactRef}>
+          <div className="section__header" >
       <h4>Get In Touch</h4>
       <h2>Contact Me</h2>
+      </div>
 
       <div className="container contact__container">
         <div className="contact__options">

@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  width: 90%;
+  width: 85%;
 }
 
 .experience__container > div {
@@ -12,7 +12,7 @@
   border-radius: 2rem;
   border: 2px solid black;
   transition: var(--transition);
-  background-position-y: -6rem;
+  background-position-y: -5rem;
 }
 
 
@@ -33,21 +33,20 @@
   margin-bottom: 2rem;
   color: var(--color-primary);
   font-weight: 700;
+  color: #70dbdb;
 }
 
 .experience__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem 5rem;
+  gap: 2rem 7.5rem;
 }
 
 
 .experience__details {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  text-align: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .experience__details h4 {
@@ -71,28 +70,35 @@
   .experience__container {
     grid-template-columns: 1fr;
     gap: 3rem;
-    width: 60%;
+    width: 50%;
   }
 }
 
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */
 @media screen and (max-width: 1024px) {
   .experience__container {
-    grid-template-columns: 1fr;
-    gap: 3rem;
+    width: 100%;
   }
 
   .experience__container > div {
     gap: 2rem;
     padding: 2rem;
     margin: 0 auto;
-    width: 350px;
+    background-position-y: -3rem;
+    width: 625px;
   }
 
   .experience__content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
+}
+
+.experience__container > div {
+  background-position-y: -7.5rem;
+}
+
+.experience__details {
   justify-content: center;
 }
 }
@@ -101,10 +107,13 @@
 @media screen and (max-width: 900px) { 
   .experience__container > div {
     gap: 2rem 1rem;
+    background-position-y: -4rem;
+    width: 575px;
   }
 
   .experience__details {
     flex-direction: column-reverse;
+    text-align: center;
   }
 
   .experience__details h4 {
@@ -119,6 +128,20 @@
   font-size: 2rem;
 }
 
+.experience__content {
+  grid-template-columns: repeat(3, 1fr);
+  width: max-content;
+  margin: auto;
+}
+
+}
+
+@media screen and (max-width: 700px) {
+  .experience__container > div {
+    background-position: -3.5rem;
+    padding: 1rem 0;
+    width: 85%;
+  }
 }
 
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
@@ -127,9 +150,10 @@
     display: flex;
     flex-direction: column;
   }
-  
+
   .experience__container > div {
-    width: 100%;
+    width: 70%;
+    padding: 1.5rem 0;
   }
 
   .experience__container > div h3 {
@@ -139,9 +163,29 @@
   .experience__content {
   display: grid;
   margin: auto;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .experience__details {
   gap: 0.25rem
 }
+}
+
+@media screen and (max-width: 475px) { 
+
+  .experience__container > div {
+    width: 70%;
+    background-position: 0;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .experience__content {
+    gap: 1.5rem 2rem;
+  }
+
+  .experience__details h4 {
+    font-size: 0.75rem;
+    letter-spacing: 1.5px;
+  }
+
 }

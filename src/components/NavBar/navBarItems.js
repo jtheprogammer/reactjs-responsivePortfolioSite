@@ -13,6 +13,7 @@ const navBarItems = [
   {
     name: "Home",
     link: "",
+    linkName: "home",
     icon: <FontAwesomeIcon icon={faHouseChimney} />,
   },
   {

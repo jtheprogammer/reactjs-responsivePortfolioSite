@@ -27,7 +27,6 @@ const Header = () => {
   useContext(ActiveNavContext);
 
   useEffect(() => {
-    console.log(headerRef.current.scrollTop)
     if (windowHeight <= headerRef.current.scrollTop) {
       setHeaderStyle("")
     } else {
@@ -64,6 +63,8 @@ const Header = () => {
       </div>
 
       <div className="header__content">
+        <div>
+        <HeaderSocials />
         <div className="terminal__container">
           <div className="terminal__container-buttons">
             <div className="terminal__container-button r-btn" />
@@ -76,6 +77,7 @@ const Header = () => {
           </div>
           </div>
         </div>
+        </div>
         <div className="me">
           <img src={Me} alt="Selfie of me, Jose." />
         </div>
@@ -85,10 +87,10 @@ const Header = () => {
         <a href="#contact" className="scroll_down">
           Scroll Down
           <FontAwesomeIcon icon={faAngleRight} />
-        </a>
+        </a> */}
 
-        <HeaderSocials />
-      </div> */}
+        
+      {/* </div> */}
       </div>
     </header>
   );

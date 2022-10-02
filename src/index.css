@@ -46,6 +46,22 @@ body {
   cursor: transparent;
 }
 
+::-webkit-scrollbar {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-button {
+  background: var(--color-primary);
+}
+
 
 /* ===== GENERAL STYLES ===== */
 .container {
@@ -67,7 +83,7 @@ h1 {
 
 section {
   height: auto;
-  padding: 3rem 0;
+  padding: 3rem 0 5rem 0;
 }
 
 #tsparticles {
@@ -79,7 +95,6 @@ section {
   bottom: 0;
   left: 0;
   right: 0;
-  border-bottom: 2px solid black ;
 }
 
 .section__header {
@@ -144,6 +159,12 @@ img {
   }
 }
 
+@media screen and (max-width: 950px) {
+  #tsparticles {
+      top: 15%;
+  }
+}
+
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
 @media screen and (max-width: 700px) {
   .container {
@@ -154,15 +175,16 @@ img {
     font-size: 2rem;
   }
 
-  section {
-  margin-bottom: 5.5rem;
-}
-
   section > h2 {
     margin-bottom: 2rem;
   }
 }
-
+/* ===== MEDIA QUEIRES (XS DEVICES) ===== */
+@media screen and (max-width: 550px) {
+  section {
+    margin-bottom: 3rem;
+  }
+}
 /* ===== MEDIA QUEIRES (XS DEVICES) ===== */
 @media screen and (max-width: 400px) and (max-height: 700px) {
   section {

@@ -47,6 +47,14 @@ footer a {
   border-color: var(--color-bg);
 }
 
+.footer__socials svg {
+  cursor: pointer;
+}
+
+.footer__socials path {
+  cursor: pointer;
+}
+
 .footer__copyright {
   text-align: left;
   margin-left: 2rem;

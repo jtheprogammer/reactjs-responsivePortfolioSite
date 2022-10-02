@@ -9,15 +9,10 @@
   transition: var(--transition);
 }
 
-.NavBar__top {
-
+.NavBar__left sub {
+  font-size: 20px;
 }
 
-
-
-/* .nav__hidden {
-  transform: translateY(calc(-1 * 100px));
-} */
 
 .NavBar__right {
   display: flex;
@@ -29,6 +24,11 @@
   font-size: 20px;
   color: gainsboro;
 }
+
+.NavBar__right path {
+  cursor: pointer;
+}
+
 
 .NavBar__fixed {
   background: rgba(0, 0, 0, 0.2);
@@ -92,6 +92,14 @@ nav svg {
 
   nav svg {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .NavBar__right a {
+    display: flex;
+    gap: 0.75rem;
+    font-size: 1rem;
   }
 }
 
