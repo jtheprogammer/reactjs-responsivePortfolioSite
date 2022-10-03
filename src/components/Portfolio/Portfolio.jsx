@@ -18,7 +18,7 @@ const portfolioItems = [
   {
     image: Resume,
     title: "My Website",
-    description: "This custom website was created using ReactJS18 and deployed with Google Firebase",
+    description: "This custom website was created using ReactJS18 and deployed with Google Firebase.",
     link: `${baseGhUrl}/reactjs-responsivePortfolioSite`,
   },
   {
@@ -37,19 +37,19 @@ const portfolioItems = [
     image: ProjectClientManager,
     title: "MERNG Project-Client Manager",
     description: 'A multi-page app where users can keep track of their existing projects, along with their associated clients. Data querying and mutations, along with project-client referencing, are handled using Apollo GraphQL. This app is styled using Bootstrap.',
-    link: `${baseGhUrl}/reactjs-robinhood-clone`,
+    link: `${baseGhUrl}/merng-projectManagerApp`,
   },
   {
     image: NextGraphBlog,
     title: "NextJS-GraphQL Blog",
     description: 'A multi-page app where users can keep track of their existing projects, along with their associated clients. Data querying and mutations, along with project-client referencing, are handled using Apollo GraphQL. This app is styled using Bootstrap.',
-    link: `${baseGhUrl}/reactjs-robinhood-clone`,
+    link: `${baseGhUrl}/nextjs-graphql-blog`,
   },
   {
     image: ReactCalendar,
     title: "React-Tailwind Calendar",
     description: 'A calendar app built from scratch on React and styled with TailwindCSS. The code for this project exists in both JavaScript and TypeScript.',
-    link: `${baseGhUrl}/reactjs-robinhood-clone`,
+    link: `${baseGhUrl}/react-calendar`,
   },
   {
     image: Crypto,
@@ -61,7 +61,7 @@ const portfolioItems = [
     image: NativeApp,
     title: "React Native NFT Marketplace UI",
     description: "A React Native app built using the Expo CLI that displays a UI design for an NFT marketplace.",
-    link: `${baseGhUrl}/react-native-neft-marketplace`,
+    link: `${baseGhUrl}/react-native-nft-marketplace`,
   },
 ];
 

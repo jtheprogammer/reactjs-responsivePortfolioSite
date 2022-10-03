@@ -7,6 +7,7 @@ import {
   faReact,
   faNodeJs,
   faBootstrap,
+  faTsSquare
 } from "@fortawesome/free-brands-svg-icons";
 import { faFileExcel } from "@fortawesome/free-solid-svg-icons";
 import {
@@ -16,7 +17,7 @@ import {
   SiD3Dotjs,
   SiGraphql,
   SiMongodb,
-  SiMaterialui,
+  SiNextdotjs,
   SiPostgresql,
   SiPowerbi,
   SiPandas,
@@ -24,6 +25,7 @@ import {
   SiScikitlearn,
   SiStreamlit,
   SiTailwindcss,
+  SiTypescript,
   SiWindows
 } from "react-icons/si";
 import { FcGoogle, FcLinux } from "react-icons/fc"
@@ -54,9 +56,8 @@ export const experienceItems = {
       },
       {
         id: "frontend4",
-        tool: "Bootstrap",
-        icon: <FontAwesomeIcon 
-        icon={faBootstrap} className="experience__details-icon" style={{ color:"#8465b3"}} />,
+        tool: "TypeScript",
+        icon: <SiTypescript className="experience__details-icon" style={{ borderRadius: "17.5%", padding: "0.1rem" }} />,
       },
       {
         id: "frontend5",
@@ -77,8 +78,9 @@ export const experienceItems = {
       },
       {
         id: "frontend8",
-        tool: "Material UI",
-        icon: <SiMaterialui className="experience__details-icon" style={{ color:"#0066cc" }} />,
+        tool: "Bootstrap",
+        icon: <FontAwesomeIcon 
+        icon={faBootstrap} className="experience__details-icon" style={{ color:"#8465b3"}} />,
       },
     ],
   },
@@ -104,21 +106,26 @@ export const experienceItems = {
       },
       {
         id: "backend4",
+        tool: "NextJS",
+        icon: <SiNextdotjs className="experience__details-icon" style={{ color:"black" }} />,
+      },
+      {
+        id: "backend5",
         tool: "GraphQL",
         icon: <SiGraphql className="experience__details-icon" style={{ color:"#e535ab" }} />,
       },
       {
-        id: "backend5",
+        id: "backend6",
         tool: "Django",
         icon: <SiDjango className="experience__details-icon" style={{ color:"white" }} />,
       },
       {
-        id: "backend6",
+        id: "backend7",
         tool: "Relational DBs",
         icon: <SiPostgresql className="experience__details-icon" style={{ color:"white", fontSize: "3rem" }} />,
       },
       {
-        id: "backend7",
+        id: "backend8",
         tool: "NoSQL DBs",
         icon: <SiMongodb className="experience__details-icon" style={{ color:"#3fa037", background: "#00004d", padding: "4px", borderRadius: "100%" }} />,
       },

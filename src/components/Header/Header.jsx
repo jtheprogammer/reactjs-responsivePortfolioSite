@@ -30,7 +30,7 @@ const Header = () => {
     if (windowHeight <= headerRef.current.scrollTop) {
       setHeaderStyle("")
     } else {
-      setHeaderStyle("mt-150")
+      setHeaderStyle("mt-180")
     }
   }, [windowHeight, headerStyle, headerRef])
 

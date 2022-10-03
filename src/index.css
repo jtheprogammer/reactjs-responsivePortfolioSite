@@ -27,7 +27,7 @@
   --transition: all 400ms ease;
 }
 
-.mt-150 {
+.mt-180 {
   margin-top: 180px;
 }
 
@@ -163,12 +163,19 @@ img {
   #tsparticles {
       top: 15%;
   }
+  .mt-180 {
+    margin-top: 140px;
+  }
 }
 
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
 @media screen and (max-width: 700px) {
   .container {
     width: var(--container-width-sm);
+  }
+
+  .mt-180 {
+    margin-top: 80px;
   }
 
   h1 {
@@ -182,7 +189,8 @@ img {
 /* ===== MEDIA QUEIRES (XS DEVICES) ===== */
 @media screen and (max-width: 550px) {
   section {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
+    padding: 1rem 0 5rem 0;
   }
 }
 /* ===== MEDIA QUEIRES (XS DEVICES) ===== */

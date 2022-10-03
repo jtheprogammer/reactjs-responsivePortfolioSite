@@ -73,9 +73,10 @@ header #home {
 }
 
 .header__content {
-  justify-content: space-between;
+  justify-content: space-around;
   display: flex;
   align-items: center;
+  margin-top: 1rem;
 }
 
 
@@ -304,6 +305,7 @@ header #home {
 
   .header__content {
     flex-direction: column;
+    margin-top: 0;
   }
 
   .me {

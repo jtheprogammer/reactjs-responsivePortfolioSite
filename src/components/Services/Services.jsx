@@ -10,13 +10,11 @@ export const ServiceList = [
     icon: WebLogo,
     title: "Web Development",
     description:
-      "I enjoy creating UIs with a clean design and content structure, that provide a smooth user experience. I also create APIs and leverage third-party APIs to enhance the functionality of my web apps.",
+      "I enjoy creating UIs with a clean design and content structure, that provide a smooth user experience. I also create and leverage APIs to enhance the functionality of my web apps.",
     tools:
       "HTML, CSS, JS, ReactJS, Bootstrap, Material-UI, Tailwind, Redux, GitHub, VSCode",
     animation: (
-      <div className="circle">
-        <div className="wifi"></div>
-      </div>
+      <></>
     ),
   },
   {
@@ -30,9 +28,10 @@ export const ServiceList = [
       "I have an adept understanding of concepts pertaining to software, hardware, networking and cybersecurity.",
     tools: "Windows, MacOS, Linux, Virtualization, Cloud Services",
     animation: (
-      <div className="circle">
-        <div className="wifi"></div>
-      </div>
+      <></>
+      // <div className="circle">
+      //   <div className="wifi"></div>
+      // </div>
     ),
   },
   {
@@ -47,9 +46,7 @@ export const ServiceList = [
     tools:
       "Python, Anaconda, Jupyter Notebook NumPy, Pandas, PowerBI, Excel, Tableau",
     animation: (
-      <div className="circle">
-        <div className="wifi"></div>
-      </div>
+    <></>
     ),
   },
 ];
@@ -64,6 +61,10 @@ const Services = ({ item }) => {
         <h4>Take a Look at</h4>
         <h2>The Services I Offer</h2>
       </div>
+      <div className="gears-container">
+      <div className="gear-rotate"></div>
+      <div className="gear-rotate-left"></div>
+    </div>
       <div className="container services__container">
         {ServiceContent.map((val, i) => (
           <div className="services__service" key={i}>
@@ -74,7 +75,9 @@ const Services = ({ item }) => {
                 <p>{val.description}</p>
                 {/* <h4>Tools I use</h4>
                 <p className="services__service-content-tools">{val.tools}</p> */}
+                <div className="services__animation">
                 {val.animation}
+                </div>
               </div>
             </center>
           </div>

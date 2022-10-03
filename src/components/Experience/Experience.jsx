@@ -16,11 +16,11 @@ const Experience = () => {
 
       <div className="container experience__container">
       {Object.keys(experienceItems).map((item) => (
-        <div>
+        <div key={experienceItems[item].title}>
           <h3>{experienceItems[item].title}</h3>
           <div className="experience__content">
-          {Object.keys(experienceItems[item].skills).map((skill) => (
-            <article className="experience__details">
+          {Object.keys(experienceItems[item].skills).map((skill, idx) => (
+            <article key={`${experienceItems[item].skills}-${idx}`} className="experience__details">
             {experienceItems[item].skills[skill].icon}
               <div>
                 <h4>{experienceItems[item].skills[skill].tool}</h4>

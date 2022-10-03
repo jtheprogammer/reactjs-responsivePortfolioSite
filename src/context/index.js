@@ -1,4 +1,4 @@
-import { createContext, useMemo, useRef } from "react";
+import { createContext, useRef } from "react";
 
 export const ActiveNavContext = createContext();
 
@@ -11,24 +11,15 @@ export const ActiveNavContextProvider = (props) => {
   const testimonialsRef = useRef();
   const contactRef = useRef();
 
-    // const memoizedRefs = useMemo(() => {
-    //   const refs = { headerRef,
-    //     aboutRef ,
-    //     experienceRef,
-    //     portfolioRef,
-    //     servicesRef,
-    //     testimonialsRef,
-    //     contactRef };
-    //   return refs;
-    // }, []);
-
-    const refs = { headerRef,
-      aboutRef,
-      portfolioRef,
-      experienceRef,
-      servicesRef,
-      testimonialsRef,
-      contactRef }
+  const refs = {
+    headerRef,
+    aboutRef,
+    portfolioRef,
+    experienceRef,
+    servicesRef,
+    testimonialsRef,
+    contactRef,
+  };
 
   return (
     <ActiveNavContext.Provider value={refs}>

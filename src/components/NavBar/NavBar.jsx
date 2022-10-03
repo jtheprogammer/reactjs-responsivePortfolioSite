@@ -26,11 +26,16 @@ const NavBar = () => {
     } else {
       setNavStyle("NavBar__fixed");
     }
-  }, [windowHeight, navStyle, headerRef]);
+
+    if (
+      (headerRef.current.scrollHeight+aboutRef.current.scrollHeight+experienceRef.current.scrollHeight+portfolioRef.current.scrollHeight)+servicesRef.current.scrollHeight+ testimonialsRef.current.scrollHeight+(contactRef.current.scrollHeight/2) <= windowHeight
+    ) {
+      setNavStyle("NavBar__hidden");
+    }       
+  }, [windowHeight, navStyle, headerRef, aboutRef, experienceRef, servicesRef, portfolioRef, testimonialsRef, contactRef]);
 
   useEffect(() => {
     for (let item of navBarItems) {
-      // console.log(testimonialsRef.current.scrollHeight)
       if (
         item.name.toLowerCase() === headerRef.current.id &&
         windowHeight <= headerRef.current.scrollHeight
@@ -43,33 +48,33 @@ const NavBar = () => {
         setActiveNav(`#${aboutRef.current.id}`);
       } else if (
         item.name.toLowerCase() === experienceRef.current.id &&
-        experienceRef.current.scrollHeight <= windowHeight
+        experienceRef.current.scrollHeight*0.9 <= windowHeight
       ) {
         setActiveNav(`#${experienceRef.current.id}`);
       }
       else if (
         item.name.toLowerCase() === portfolioRef.current.id &&
-        portfolioRef.current.scrollHeight*1.2 <= windowHeight
+        portfolioRef.current.scrollHeight <= windowHeight
       ) {
         setActiveNav(`#${portfolioRef.current.id}`);
       }  else if (
         item.name.toLowerCase() === servicesRef.current.id &&
-        servicesRef.current.scrollHeight*9.8 <= windowHeight
-      ) {
+        ((headerRef.current.scrollHeight+aboutRef.current.scrollHeight+experienceRef.current.scrollHeight+portfolioRef.current.scrollHeight)) <= windowHeight
+      ) 
+      {
         setActiveNav(`#${servicesRef.current.id}`);
-      }  else if (
+      }  
+      else if (
         item.name.toLowerCase() === testimonialsRef.current.id &&
-        testimonialsRef.current.scrollHeight*11.5 <= windowHeight
+        ((headerRef.current.scrollHeight+aboutRef.current.scrollHeight+experienceRef.current.scrollHeight+portfolioRef.current.scrollHeight)+servicesRef.current.scrollHeight <= windowHeight)
       ) {
         setActiveNav(`#${testimonialsRef.current.id}`);
-      }     else if (
+      }    else if (
         item.name.toLowerCase() === contactRef.current.id &&
-        contactRef.current.scrollHeight*13 <= windowHeight
-      ) {
+        ((headerRef.current.scrollHeight+aboutRef.current.scrollHeight+experienceRef.current.scrollHeight+portfolioRef.current.scrollHeight)+servicesRef.current.scrollHeight+ testimonialsRef.current.scrollHeight <= windowHeight
+      )) {
         setActiveNav(`#${contactRef.current.id}`);
       }        
-      
-
     }
   }, [
     activeNav,

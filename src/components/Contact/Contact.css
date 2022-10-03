@@ -70,7 +70,8 @@ textarea {
   color: var(--color-white);
   font-family: "Oxygen", sans-serif;
   font-size: 1rem;
-  cursor: pointer;
+  cursor: text;
+  caret-color: var(--color-white);
 }
 
 input::placeholder, 
