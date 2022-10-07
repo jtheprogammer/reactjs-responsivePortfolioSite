@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { VscServerProcess } from "react-icons/vsc";
 import { RiBarChart2Fill } from "react-icons/ri";
 import { WebLogo } from "./ServicesSvgs";
@@ -13,9 +13,7 @@ export const ServiceList = [
       "I enjoy creating UIs with a clean design and content structure, that provide a smooth user experience. I also create and leverage APIs to enhance the functionality of my web apps.",
     tools:
       "HTML, CSS, JS, ReactJS, Bootstrap, Material-UI, Tailwind, Redux, GitHub, VSCode",
-    animation: (
-      <></>
-    ),
+    animation: <></>,
   },
   {
     icon: (
@@ -45,16 +43,14 @@ export const ServiceList = [
       "I use BI tools and software alongside data science programming libraries in order to analyze, visualize, and interpret data, and then display the KPIs in dynamic dashboards.",
     tools:
       "Python, Anaconda, Jupyter Notebook NumPy, Pandas, PowerBI, Excel, Tableau",
-    animation: (
-    <></>
-    ),
+    animation: <></>,
   },
 ];
 
 const Services = ({ item }) => {
   const ServiceContent = ServiceList.slice(0, item);
   const { servicesRef } = useContext(ActiveNavContext);
-  
+
   return (
     <section id="services" ref={servicesRef}>
       <div className="section__header">
@@ -62,9 +58,9 @@ const Services = ({ item }) => {
         <h2>The Services I Offer</h2>
       </div>
       <div className="gears-container">
-      <div className="gear-rotate"></div>
-      <div className="gear-rotate-left"></div>
-    </div>
+        <div className="gear-rotate"></div>
+        <div className="gear-rotate-left"></div>
+      </div>
       <div className="container services__container">
         {ServiceContent.map((val, i) => (
           <div className="services__service" key={i}>
@@ -75,9 +71,7 @@ const Services = ({ item }) => {
                 <p>{val.description}</p>
                 {/* <h4>Tools I use</h4>
                 <p className="services__service-content-tools">{val.tools}</p> */}
-                <div className="services__animation">
-                {val.animation}
-                </div>
+                <div className="services__animation">{val.animation}</div>
               </div>
             </center>
           </div>

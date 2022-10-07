@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 
 import { aboutTabsItems } from "./aboutTabsItems";
@@ -32,7 +32,9 @@ const AboutTabs = () => {
                 {Object.keys(aboutTabsItems[item].tabPanel).map((li) => (
                   <li key={aboutTabsItems[item].tabPanel[li].id}>
                     <h3>{aboutTabsItems[item].tabPanel[li].title}</h3>
-                    <h5><i>{aboutTabsItems[item].tabPanel[li]?.degree}</i></h5>
+                    <h5>
+                      <i>{aboutTabsItems[item].tabPanel[li]?.degree}</i>
+                    </h5>
                     <h4>{aboutTabsItems[item].tabPanel[li].description}</h4>
                   </li>
                 ))}

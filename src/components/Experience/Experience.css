@@ -15,7 +15,6 @@
   background-position-y: -5rem;
 }
 
-
 .experience__container > div:hover {
   background: linear-gradient(var(--color-primary-variant), transparent);
   border-color: var(--color-primary-variant);
@@ -42,7 +41,6 @@
   gap: 2rem 7.5rem;
 }
 
-
 .experience__details {
   display: flex;
   align-items: center;
@@ -57,7 +55,6 @@
 }
 
 .experience__details svg {
-
 }
 
 .experience__details-icon {
@@ -89,22 +86,22 @@
   }
 
   .experience__content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
 
-.experience__container > div {
-  background-position-y: -7.5rem;
-}
+  .experience__container > div {
+    background-position-y: -7.5rem;
+  }
 
-.experience__details {
-  justify-content: center;
-}
+  .experience__details {
+    justify-content: center;
+  }
 }
 
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
-@media screen and (max-width: 900px) { 
+@media screen and (max-width: 900px) {
   .experience__container > div {
     gap: 2rem 1rem;
     background-position-y: -4rem;
@@ -117,23 +114,21 @@
   }
 
   .experience__details h4 {
-  font-size: 1rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-}
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+  }
 
+  .experience__details-icon {
+    color: var(--color-primary);
+    font-size: 2rem;
+  }
 
-.experience__details-icon {
-  color: var(--color-primary);
-  font-size: 2rem;
-}
-
-.experience__content {
-  grid-template-columns: repeat(3, 1fr);
-  width: max-content;
-  margin: auto;
-}
-
+  .experience__content {
+    grid-template-columns: repeat(3, 1fr);
+    width: max-content;
+    margin: auto;
+  }
 }
 
 @media screen and (max-width: 700px) {
@@ -145,7 +140,7 @@
 }
 
 /* ===== MEDIA QUEIRES (SM DEVICES) ===== */
-@media screen and (max-width: 550px) { 
+@media screen and (max-width: 550px) {
   .experience__container {
     display: flex;
     flex-direction: column;
@@ -161,18 +156,17 @@
   }
 
   .experience__content {
-  display: grid;
-  margin: auto;
-  grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .experience__details {
+    gap: 0.25rem;
+  }
 }
 
-.experience__details {
-  gap: 0.25rem
-}
-}
-
-@media screen and (max-width: 475px) { 
-
+@media screen and (max-width: 475px) {
   .experience__container > div {
     width: 70%;
     background-position: 0;
@@ -187,5 +181,4 @@
     font-size: 0.75rem;
     letter-spacing: 1.5px;
   }
-
 }

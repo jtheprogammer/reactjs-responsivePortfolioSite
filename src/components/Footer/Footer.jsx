@@ -1,5 +1,3 @@
-import React from "react";
-
 import navBarItems from "../NavBar/navBarItems";
 import { socialItems } from "./../Header/HeaderSocials";
 import "./Footer.css";

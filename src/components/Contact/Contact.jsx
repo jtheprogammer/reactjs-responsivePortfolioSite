@@ -1,4 +1,4 @@
-import React, { useContext, useRef } from "react";
+import { useContext, useRef } from "react";
 import emailjs from "emailjs-com";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -30,8 +30,7 @@ const contactOptions = [
 
 const Contact = () => {
   const form = useRef();
-  const { contactRef } =
-  useContext(ActiveNavContext);
+  const { contactRef } = useContext(ActiveNavContext);
 
   const sendEmail = (e) => {
     e.preventDefault();
@@ -57,9 +56,9 @@ const Contact = () => {
 
   return (
     <section id="contact" ref={contactRef}>
-          <div className="section__header" >
-      <h4>Get In Touch</h4>
-      <h2>Contact Me</h2>
+      <div className="section__header">
+        <h4>Get In Touch</h4>
+        <h2>Contact Me</h2>
       </div>
 
       <div className="container contact__container">

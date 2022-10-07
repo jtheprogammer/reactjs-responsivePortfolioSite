@@ -1,5 +1,4 @@
-section#about
-.about__container {
+section#about .about__container {
   display: grid;
   grid-template-columns: 35% 80%;
   gap: 10%;
@@ -86,10 +85,9 @@ section#about
 
 /* ===== MEDIA QUEIRES (MD DEVICES) ===== */
 @media screen and (max-width: 1024px) {
-  section#about
-.about__container {
-  gap: 5%;
-}
+  section#about .about__container {
+    gap: 5%;
+  }
   .about__container {
     grid-template-columns: 1fr;
     padding: 0 3rem;
@@ -120,16 +118,14 @@ section#about
   section#about {
     padding: 1rem 0 6rem 0;
   }
-  section#about
-.about__container {
-  grid-template-columns: 100%;
-}
+  section#about .about__container {
+    grid-template-columns: 100%;
+  }
 
-.about__me {
-  width: 50%;
+  .about__me {
+    width: 50%;
     margin: 1rem auto;
-}
-
+  }
 }
 
 /* ===== MEDIA QUEIRES (
@@ -157,25 +153,25 @@ section#about
   }
 
   .about__card > h3 {
-  font-size: 24px;
-}
+    font-size: 24px;
+  }
 
-.about__card > p {
-  font-size: 18px;
-  color: var(--color-light);
-  cursor: pointer;
-}
+  .about__card > p {
+    font-size: 18px;
+    color: var(--color-light);
+    cursor: pointer;
+  }
 
-.experience__container > div h3 {
+  .experience__container > div h3 {
     padding: 0 0.25rem;
-}
+  }
 }
 
 /* ===== MEDIA QUEIRES (XS DEVICES) ===== */
 @media screen and (max-width: 550px) {
   section#about .about__container {
     gap: 2%;
-}
+  }
   .about__cards {
     grid-template-columns: repeat(1, 1fr);
     margin-bottom: 4rem;

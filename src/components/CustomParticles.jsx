@@ -1,4 +1,3 @@
-import React from "react";
 import Particles from "react-tsparticles";
 
 const CustomParticles = ({ children }) => {
@@ -133,7 +132,7 @@ const CustomParticles = ({ children }) => {
         fps_limit: 60,
       }}
     >
-      { children }
+      {children}
     </Particles>
   );
 };

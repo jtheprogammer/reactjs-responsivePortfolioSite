@@ -74,9 +74,9 @@ textarea {
   caret-color: var(--color-white);
 }
 
-input::placeholder, 
+input::placeholder,
 textarea::placeholder {
-  color: rgb(168, 155, 155)
+  color: rgb(168, 155, 155);
 }
 
 @media screen and (max-width: 1250px) {

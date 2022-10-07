@@ -1,6 +1,9 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin, faGithub, faStackOverflow } from "@fortawesome/free-brands-svg-icons";
+import {
+  faLinkedin,
+  faGithub,
+  faStackOverflow,
+} from "@fortawesome/free-brands-svg-icons";
 
 export const socialItems = [
   {
@@ -13,8 +16,8 @@ export const socialItems = [
   },
   {
     link: "https://stackoverflow.com/users/18595271/jose-luis-cruz",
-    icon: <FontAwesomeIcon icon={faStackOverflow} />
-  }
+    icon: <FontAwesomeIcon icon={faStackOverflow} />,
+  },
 ];
 
 const HeaderSocials = () => {

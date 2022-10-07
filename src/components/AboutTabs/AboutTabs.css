@@ -67,7 +67,6 @@
 /* ===== MEDIA QUEIRES (
   SM DEVICES) ===== */
 @media screen and (max-width: 700px) {
-
   .tabs__container {
     max-width: 475px;
     margin: auto;
@@ -87,23 +86,21 @@
 }
 
 @media screen and (max-width: 550px) {
-  
-
-.tabs__container {
+  .tabs__container {
     margin: auto;
     padding: 1rem;
-}
+  }
 
-.tab__panel {
-  padding-top: 1rem;
-}
-.react-tabs__tab-list {
-  font-size: 0.85rem;
-  justify-content: space-around;
-  padding: 0.25rem;
-}
+  .tab__panel {
+    padding-top: 1rem;
+  }
+  .react-tabs__tab-list {
+    font-size: 0.85rem;
+    justify-content: space-around;
+    padding: 0.25rem;
+  }
 
-.react-tabs__tab-list {
-  gap: 0.75rem;
-}
+  .react-tabs__tab-list {
+    gap: 0.75rem;
+  }
 }

@@ -11,12 +11,12 @@ export const useWindowHeight = () => {
     const setSize = () => {
       setWindowHeight(window.scrollY);
       // console.log(windowHeight)
-    }
+    };
 
     if (isWindowClient) {
       return window.addEventListener("scroll", setSize);
     }
   }, [isWindowClient, setWindowHeight, windowHeight]);
   return windowHeight;
-}
+};
 export default useWindowHeight;
